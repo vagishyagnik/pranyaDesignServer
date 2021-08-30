@@ -6,6 +6,7 @@ import internal from "stream";
 
 export interface productInterface {
     productTitle: string,
+    imageUrl : string,
     MRP: number,
     sellingPrice: number,
     shippingCharges: number,
