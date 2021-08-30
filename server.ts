@@ -1,6 +1,7 @@
 import * as express from "express"
 import * as session from "express-session";
 const server = express();
+const db = require('./db')()
 
 server.use(express.json());
 server.use(express.urlencoded({extended:true}));
