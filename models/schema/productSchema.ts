@@ -12,7 +12,7 @@ const schema = new Schema<productInterface>({
     sellingPrice: {type: Number, required: true},
     shippingCharges: {type: Number, required: true},
     category: {type: category, required: true},
-    description: {type: String, required: true},
+    description: {type: String, required: false},
     shippingInfo: {type: String, required: true},
     returnInfo: {type: String, required: true},
     careInstructions: {type: String, required: true},

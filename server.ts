@@ -1,6 +1,7 @@
 import * as express from "express"
 import * as session from "express-session";
-import product from "./models/controllers/addProduct"
+import addProduct from "./models/controllers/addProduct"
+import getProduct from "./models/controllers/getProducts"
 
 const server = express();
 const db = require('./db')()
@@ -15,7 +16,7 @@ server.use(session({
 }));
 
 server.use((req, res, next) => {
-    res. header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 })
@@ -24,7 +25,8 @@ server.get('/',(req,res)=>{
     res.send({response : 'Success'})
 })
 
-server.use('/publish', product)
+server.use('/publish', addProduct)
+server.use('/getProduct', getProduct)
 
 const PORT = process.env.PORT || 6979
 server.listen(PORT,()=>{
