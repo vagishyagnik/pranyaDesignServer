@@ -17,7 +17,6 @@ export interface productInterface {
     careInstructions: string,
     saleable: enums.saleable,
     status: enums.status,
-    size?: string,
     dimensions?: dimensionsInterface,
     weight?: units,
     color?: string,

@@ -17,7 +17,6 @@ const schema = new Schema<productInterface>({
     careInstructions: {type: String, required: true},
     saleable: {type: String, enum: enums.saleable,required: true},
     status: {type: String, enums: enums.status,required: true},
-    size: {type: String, required: false},
     dimensions: {type: dimensions, required: false},
     weight: {type: String, required: false},
     color: {type: String, required: false},
