@@ -6,7 +6,6 @@ import { numericValueInterface } from "./dimensions";
 
 export interface productInterface {
     productTitle: string,
-    imageUrl : string,
     MRP: number,
     imageUrl: string,
     sellingPrice: number,

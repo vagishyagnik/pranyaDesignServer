@@ -9,7 +9,6 @@ const schema = new Schema<productInterface>({
     productTitle:  {type: String, required: true},
     imageUrl: {type: String, required: true},
     MRP: {type: Number, required: true},
-    imageUrl: {type: String, required: true},
     sellingPrice: {type: Number, required: true},
     shippingCharges: {type: Number, required: true},
     category: {type: category, required: true},
