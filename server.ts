@@ -1,5 +1,7 @@
 import * as express from "express"
 import * as session from "express-session";
+import product from "./models/controllers/addProduct"
+
 const server = express();
 const db = require('./db')()
 
@@ -21,6 +23,8 @@ server.use((req, res, next) => {
 server.get('/',(req,res)=>{
     res.send({response : 'Success'})
 })
+
+server.use('/publish', product)
 
 const PORT = process.env.PORT || 6979
 server.listen(PORT,()=>{

@@ -6,4 +6,4 @@ const schema = new Schema<administrator>({
     emailId: {type: String, required: true}
 })
 
-export const administratorSchema = model<administrator>('Administrator', schema);
+export const administratorSchema = model<administrator>('Administrator', schema)
