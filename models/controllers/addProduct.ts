@@ -12,7 +12,7 @@ const route = exp.Router()
 
 route.post('/',(req,res)=>{
 
-    console.log(req)
+    console.log(req.body);
     let saleableValue: String = req.body["saleable"]
     saleableValue.toLowerCase()
     let saleableBool: Boolean = false;
@@ -63,6 +63,7 @@ route.post('/',(req,res)=>{
     productSchema.create(data).then((status)=>{
         res.status(200).send("Product pushed to Database")
     }).catch((err)=>{
+        console.log("Error : " + err)
         res.status(400).send("Something broke, Error: " + err)
     })
 })

@@ -19,6 +19,7 @@ export interface productInterface {
     status: enums.status,
     dimensions?: dimensionsInterface,
     weight?: numericValueInterface,
+    size?: string,
     color?: string,
     style?: string,
     inStock: number
