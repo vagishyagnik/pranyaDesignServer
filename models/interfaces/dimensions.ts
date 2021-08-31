@@ -6,3 +6,8 @@ export interface dimensionsInterface {
     height?: number,
     unit: units
 }
+
+export interface numericValueInterface {
+    value: number,
+    unit: units
+}
