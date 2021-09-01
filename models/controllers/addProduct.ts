@@ -17,6 +17,8 @@ route.post('/',(req,res)=>{
     // let data = {}
 
     if(!req.body["saleable"]) res.status(400).send('Item Sale info not mentioned')
+
+    
     let saleableValue: String = req.body["saleable"]
     saleableValue.toLowerCase()
     data["saleable"] = saleable.notSaleable
@@ -104,44 +106,3 @@ route.post('/',(req,res)=>{
 })
 
 export default route
-
-
-
-
-// let data: productInterface = {
-//     productTitle: req.body["productTitle"],
-//     MRP: Number(req.body["MRP"]),
-//     imageUrl: req.body["imageUrl"],
-//     sellingPrice: Number(req.body["sellingPrice"]),
-//     shippingCharges: Number(req.body["shippingCharges"]),
-//     description: (req.body["description"])? req.body["description"]: null,
-//     shippingInfo: req.body["shippingInfo"],
-//     returnInfo: req.body["returnInfo"],
-//     careInstructions: req.body["careInstructions"],
-//     size: (req.body["size"])? req.body["size"]: null,
-//     color: (req.body["color"])? req.body["color"]: null,
-//     style: (req.body["style"])? req.body["style"]: null,
-//     inStock: (req.body["inStock"])? Number(req.body["inStock"]): null
-// }
-// route.get('/',async (req,res)=>{
-//     let accReqList
-//     let compReqList
-//     let paymentsList
-//     if(req.session.passport != undefined){
-//         accReqList = await requests.find(
-//         {
-//             promoterUsername: req.session.passport.user.username,
-//             status : "Accept"
-//         })
-//         compReqList = await requests.find(
-//         {
-//             promoterUsername: req.session.passport.user.username,
-//             status : "Complete"
-//         })
-//         paymentsList = await payments.find(
-//         {
-//             promoterUsername: req.session.passport.user.username
-//         })
-//     }
-//     res.render('../public/business/index.hbs',{accReqList, compReqList, paymentsList});
-// })

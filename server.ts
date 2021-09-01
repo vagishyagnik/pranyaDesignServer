@@ -2,6 +2,8 @@ import * as express from "express"
 import * as session from "express-session";
 import addProduct from "./models/controllers/addProduct"
 import getProduct from "./models/controllers/getProducts"
+import updateProduct from "./models/controllers/updateProduct"
+import deleteProduct from "./models/controllers/deleteProduct"
 
 const server = express();
 const db = require('./db')()
@@ -27,6 +29,8 @@ server.get('/',(req,res)=>{
 
 server.use('/publish', addProduct)
 server.use('/getProduct', getProduct)
+server.use('/update', updateProduct)
+server.use('/delete', deleteProduct)
 
 const PORT = process.env.PORT || 6979
 server.listen(PORT,()=>{
